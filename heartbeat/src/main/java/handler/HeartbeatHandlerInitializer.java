@@ -22,6 +22,6 @@ public class HeartbeatHandlerInitializer extends ChannelInitializer<Channel> {
         ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast(new IdleStateHandler(READ_IDEL_TIME_OUT,
                 WRITE_IDEL_TIME_OUT, ALL_IDEL_TIME_OUT, TimeUnit.SECONDS)); // 1
-        pipeline.addLast(new HeartbeatServerHandler()); // 2
+        pipeline.addLast(new HeartbeatServerHandler());
     }
 }
